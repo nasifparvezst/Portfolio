@@ -1,12 +1,420 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <title>QA Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nasif Parvez - Junior QA Engineer portfolio featuring manual testing skills, QA projects, learning roadmap, and contact information." />
+  <title>Nasif Parvez | Aspiring SQA Engineer</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <h1>My QA Portfolio</h1>
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="Nasif Parvez home">
+        <span class="brand-mark">NP</span>
+        <span class="brand-text">Nasif Parvez</span>
+      </a>
 
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme" title="Toggle color theme">
+          <span class="theme-icon" aria-hidden="true">☼</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section" id="home">
+      <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Aspiring SQA Engineer • Fresher</p>
+          <h1>I test software with a <span>quality-first mindset.</span></h1>
+          <p class="hero-text">
+            I am Nasif Parvez, a Computer Science and Engineering student building hands-on experience in manual testing, test design, bug reporting, and real-world web application testing.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View QA Projects</a>
+            <a class="btn btn-secondary" href="#contact">Contact Me</a>
+          </div>
+
+          <div class="hero-meta" aria-label="Quick profile summary">
+            <div>
+              <strong>Manual QA</strong>
+              <span>Current Focus</span>
+            </div>
+            <div>
+              <strong>2</strong>
+              <span>Featured Projects</span>
+            </div>
+            <div>
+              <strong>Growing</strong>
+              <span>API + Automation</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card reveal" aria-label="QA profile card">
+          <div class="status-row">
+            <span class="status-dot"></span>
+            <span>Open to Junior QA opportunities</span>
+          </div>
+
+          <div class="terminal-card" aria-hidden="true">
+            <div class="terminal-top">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="prompt">qa@portfolio:~$</span> run profile-check</p>
+              <p><span class="ok">✓</span> Manual Testing</p>
+              <p><span class="ok">✓</span> Test Scenario & Test Case Design</p>
+              <p><span class="ok">✓</span> Bug Reporting & Retesting</p>
+              <p><span class="ok">✓</span> Functional / Smoke / Regression</p>
+              <p><span class="learning">↗</span> Learning API & Automation Testing</p>
+            </div>
+          </div>
+
+          <div class="mini-note">
+            <span>QA principle</span>
+            <strong>Find risk before users find the bug.</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container two-column">
+        <div class="section-heading reveal">
+          <p class="eyebrow">About Me</p>
+          <h2>Learning QA through practice, not theory alone.</h2>
+        </div>
+
+        <div class="about-copy reveal">
+          <p>
+            I am a Computer Science and Engineering student with a strong interest in Software Quality Assurance. I am building my QA foundation through manual testing, SDLC, STLC, test scenario and test case design, bug reporting, test execution, retesting, and regression testing.
+          </p>
+          <p>
+            Alongside structured practice projects, I am also gaining exposure to a live web application where testing happens in a real development environment. My programming background includes C, C++, Java, and Python, with MySQL for database work. My goal is to keep strengthening QA fundamentals and gradually expand into API testing, SQL for QA, automation testing, and performance testing.
+          </p>
+
+          <div class="about-points">
+            <article>
+              <span>01</span>
+              <div>
+                <h3>Quality Mindset</h3>
+                <p>I look beyond whether a feature “works” and think about usability, edge cases, risk, and user impact.</p>
+              </div>
+            </article>
+            <article>
+              <span>02</span>
+              <div>
+                <h3>Evidence-Based Learning</h3>
+                <p>I document test scenarios, test cases, execution results, and defects so my learning can be demonstrated with actual work.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="skills">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <p class="eyebrow">Skills & Tools</p>
+          <h2>What I can work with now — and what I am learning next.</h2>
+        </div>
+
+        <div class="skills-layout">
+          <article class="skill-panel reveal">
+            <div class="panel-title">
+              <span class="panel-number">01</span>
+              <div>
+                <p>Current Skills</p>
+                <h3>Manual Testing Foundation</h3>
+              </div>
+            </div>
+
+            <div class="chip-grid">
+              <span>SDLC</span>
+              <span>STLC</span>
+              <span>Test Scenario Design</span>
+              <span>Test Case Design</span>
+              <span>Bug Reporting</span>
+              <span>Functional Testing</span>
+              <span>Smoke Testing</span>
+              <span>Regression Testing</span>
+              <span>Retesting</span>
+              <span>Exploratory Testing</span>
+              <span>UI Testing</span>
+              <span>Test Execution</span>
+            </div>
+          </article>
+
+          <article class="skill-panel reveal">
+            <div class="panel-title">
+              <span class="panel-number">02</span>
+              <div>
+                <p>Tools</p>
+                <h3>My QA Workspace</h3>
+              </div>
+            </div>
+
+            <div class="tool-list">
+              <div><span class="tool-icon">G</span><strong>Git & GitHub</strong><small>Version control</small></div>
+              <div><span class="tool-icon">M</span><strong>MySQL</strong><small>Database fundamentals</small></div>
+              <div><span class="tool-icon">P</span><strong>Python</strong><small>Programming foundation</small></div>
+              <div><span class="tool-icon">J</span><strong>Java</strong><small>Programming foundation</small></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="projects-head reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Featured QA Projects</p>
+            <h2>Projects that show how I approach testing.</h2>
+          </div>
+
+          <div class="project-filter" role="group" aria-label="Filter projects">
+            <button class="filter-btn active" data-filter="all" type="button">All</button>
+            <button class="filter-btn" data-filter="practice" type="button">Practice</button>
+            <button class="filter-btn" data-filter="live" type="button">Live</button>
+          </div>
+        </div>
+
+        <div class="project-grid" id="projectGrid">
+          <article class="project-card reveal" data-category="practice">
+            <div class="project-topline">
+              <span class="project-type practice">Practice / Demo Project</span>
+              <span class="project-status">Completed / Ongoing Practice</span>
+            </div>
+
+            <div class="project-number">01</div>
+            <h3>OrangeHRM Manual Testing</h3>
+            <p>
+              A structured manual testing practice project on the OrangeHRM demo application, focused on understanding the complete tester workflow across important modules and user flows.
+            </p>
+
+            <div class="project-tags">
+              <span>Functional Testing</span>
+              <span>Smoke Testing</span>
+              <span>Regression</span>
+              <span>Test Cases</span>
+              <span>Bug Reporting</span>
+            </div>
+
+            <div class="project-details">
+              <div><strong>Focus</strong><span>End-to-end manual QA practice</span></div>
+              <div><strong>Evidence</strong><span>Scenarios, cases, execution & bug reports</span></div>
+            </div>
+
+            <button class="text-link project-details-btn" type="button" data-project="orangehrm">View project details →</button>
+          </article>
+
+          <article class="project-card featured reveal" data-category="live">
+            <div class="project-topline">
+              <span class="project-type live">Live / Real Project</span>
+              <span class="project-status">Ongoing</span>
+            </div>
+
+            <div class="project-number">02</div>
+            <h3>BiponiBD Website QA</h3>
+            <p>
+              Real-world QA exposure on a live, evolving web application where testing is performed alongside active development. The focus is on practical functional testing, exploratory testing, issue discovery, and clear communication of findings.
+            </p>
+
+            <div class="project-tags">
+              <span>Live Web Testing</span>
+              <span>Exploratory Testing</span>
+              <span>Functional Testing</span>
+              <span>Bug Reporting</span>
+              <span>UI / UX Checks</span>
+            </div>
+
+            <div class="project-details">
+              <div><strong>Environment</strong><span>Real development workflow</span></div>
+              <div><strong>Note</strong><span>Only non-confidential work is showcased</span></div>
+            </div>
+
+            <button class="text-link project-details-btn" type="button" data-project="biponibd">View project details →</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="workflow">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <p class="eyebrow">My QA Workflow</p>
+          <h2>How I approach a testing task from start to finish.</h2>
+        </div>
+
+        <div class="workflow reveal">
+          <article><span>01</span><h3>Understand</h3><p>Study requirements, features, users, and expected behavior.</p></article>
+          <article><span>02</span><h3>Design</h3><p>Create test scenarios, test cases, and useful test data.</p></article>
+          <article><span>03</span><h3>Execute</h3><p>Run tests carefully and record actual results.</p></article>
+          <article><span>04</span><h3>Report</h3><p>Document defects with clear steps, evidence, severity, and impact.</p></article>
+          <article><span>05</span><h3>Verify</h3><p>Retest fixes and run regression around affected areas.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="roadmap">
+      <div class="container roadmap-layout">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Learning Roadmap</p>
+          <h2>What I am building toward next.</h2>
+          <p class="section-description">
+            These are learning goals, not expert-level claims. As I complete hands-on projects in each area, they will move into my core skills and project portfolio.
+          </p>
+        </div>
+
+        <div class="roadmap-list reveal">
+          <article>
+            <span class="roadmap-status">Learning</span>
+            <div><h3>API Testing with Postman</h3><p>Requests, responses, status codes, collections, environments, and basic API test scenarios.</p></div>
+          </article>
+          <article>
+            <span class="roadmap-status">Next</span>
+            <div><h3>SQL for QA</h3><p>Basic queries for data validation and backend-oriented test checks.</p></div>
+          </article>
+          <article>
+            <span class="roadmap-status">Planned</span>
+            <div><h3>Web Automation Testing</h3><p>Building a beginner automation project with Selenium or Playwright after strengthening manual QA.</p></div>
+          </article>
+          <article>
+            <span class="roadmap-status">Planned</span>
+            <div><h3>Performance Testing</h3><p>Learning performance-testing fundamentals and practical tool-based execution later in the roadmap.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="education">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <p class="eyebrow">Education & Growth</p>
+          <h2>Academic foundation with continuous practical learning.</h2>
+        </div>
+
+        <div class="education-card reveal">
+          <div>
+            <span class="education-label">B.Sc. in CSE</span>
+            <h3>Computer Science & Engineering</h3>
+            <p>2023–2027 • CGPA: 3.64 • University name to be confirmed before final publishing.</p>
+          </div>
+          <div class="education-divider"></div>
+          <div>
+            <span class="education-label">Career Direction</span>
+            <h3>Software Quality Assurance</h3>
+            <p>Focused on building practical QA skills through structured projects, live testing exposure, documentation, and continuous learning.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <p class="eyebrow">Contact</p>
+          <h2>Let’s connect about QA, testing, or junior opportunities.</h2>
+          <p>
+            I am based in Dhaka, Bangladesh. If you would like to discuss a QA internship, junior role, testing project, or collaboration, feel free to reach out.
+          </p>
+
+          <div class="contact-links">
+            <a href="https://github.com/nasifparvezst" target="_blank" rel="noreferrer">
+              <span>GitHub</span>
+              <strong>github.com/nasifparvezst</strong>
+            </a>
+            <a href="mailto:niloyy@gmail.com">
+              <span>Email</span>
+              <strong>niloyy@gmail.com</strong>
+            </a>
+            <a href="https://linkedin.com/in/nniloy/" target="_blank" rel="noreferrer">
+              <span>LinkedIn</span>
+              <strong>linkedin.com/in/nniloy/</strong>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="field-row">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" autocomplete="name" />
+            <small class="error-message"></small>
+          </div>
+
+          <div class="field-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="name@example.com" autocomplete="email" />
+            <small class="error-message"></small>
+          </div>
+
+          <div class="field-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message here..."></textarea>
+            <small class="error-message"></small>
+          </div>
+
+          <button class="btn btn-primary btn-full" type="submit">Validate Message</button>
+          <p class="form-note">Demo contact form for this portfolio. JavaScript validates the input locally; no message is sent yet.</p>
+          <p class="form-success" id="formSuccess" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <strong>Nasif Parvez</strong>
+        <span>Junior QA Engineer Portfolio</span>
+      </div>
+      <p>Built with HTML5, CSS3 & Vanilla JavaScript.</p>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <dialog class="project-modal" id="projectModal">
+    <div class="modal-shell">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Close project details">×</button>
+      <p class="eyebrow" id="modalType">Project</p>
+      <h2 id="modalTitle">Project title</h2>
+      <p id="modalDescription"></p>
+      <div class="modal-columns">
+        <div>
+          <h3>What I worked on</h3>
+          <ul id="modalWork"></ul>
+        </div>
+        <div>
+          <h3>What this demonstrates</h3>
+          <ul id="modalOutcome"></ul>
+        </div>
+      </div>
+      <p class="modal-note" id="modalNote"></p>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
 </body>
 </html>
