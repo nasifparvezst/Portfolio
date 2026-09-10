@@ -1,96 +1,123 @@
-const root = document.documentElement;
-const siteHeader = document.querySelector('.site-header');
-const themeToggle = document.getElementById('themeToggle');
-const themeIcon = themeToggle?.querySelector('.theme-icon');
-const navToggle = document.getElementById('navToggle');
-const navLinks = document.getElementById('navLinks');
-const navAnchors = [...document.querySelectorAll('.nav-links a[href^="#"]')];
-const filterButtons = [...document.querySelectorAll('.filter-btn')];
-const projectCards = [...document.querySelectorAll('.project-card')];
-const projectModal = document.getElementById('projectModal');
-const modalClose = document.getElementById('modalClose');
-const projectDetailButtons = [...document.querySelectorAll('.project-details-btn')];
-const contactForm = document.getElementById('contactForm');
-const formSuccess = document.getElementById('formSuccess');
-const heroPhoto = document.getElementById('heroPhoto');
-const photoFallback = document.getElementById('photoFallback');
-const scrollProgress = document.getElementById('scrollProgress');
-const backToTop = document.getElementById('backToTop');
+const root =
+  document.documentElement;
 
-function showPhotoFallback() {
-  heroPhoto?.classList.add('is-hidden');
-  photoFallback?.classList.add('is-visible');
-}
+const themeToggle =
+  document.getElementById(
+    'themeToggle'
+  );
 
-function showProfilePhoto() {
-  heroPhoto?.classList.remove('is-hidden');
-  photoFallback?.classList.remove('is-visible');
-}
+const navToggle =
+  document.getElementById(
+    'navToggle'
+  );
 
-if (heroPhoto) {
-  heroPhoto.addEventListener('load', showProfilePhoto);
-  heroPhoto.addEventListener('error', showPhotoFallback);
+const navLinks =
+  document.getElementById(
+    'navLinks'
+  );
 
-  if (heroPhoto.complete) {
-    heroPhoto.naturalWidth > 0
-      ? showProfilePhoto()
-      : showPhotoFallback();
-  }
-}
+const filterButtons =
+  document.querySelectorAll(
+    '.filter-btn'
+  );
+
+const projectCards =
+  document.querySelectorAll(
+    '.project-card'
+  );
+
+const modal =
+  document.getElementById(
+    'projectModal'
+  );
+
+const modalClose =
+  document.getElementById(
+    'modalClose'
+  );
+
+const contactForm =
+  document.getElementById(
+    'contactForm'
+  );
+
+const backToTop =
+  document.getElementById(
+    'backToTop'
+  );
+
+
+/* =========================
+   PROJECT DATA
+========================= */
 
 const projectContent = {
+
   orangehrm: {
-    type: 'Practice / Demo QA Project',
-    title: 'OrangeHRM Manual Testing',
+
+    type:
+      'Practice / Demo QA Project',
+
+    title:
+      'OrangeHRM Manual Testing',
 
     description:
       'A structured practice project created to strengthen my understanding of the complete manual testing workflow on a realistic HR management application.',
 
     work: [
-      'Explored important modules, user roles, and business flows.',
-      'Prepared focused test scenarios, test cases, and test data.',
-      'Executed tests and documented expected versus actual results.',
-      'Practiced bug reporting, retesting, smoke testing, and regression thinking.'
+      'Explored important modules and user flows.',
+      'Prepared test scenarios and test cases.',
+      'Executed tests and documented results.',
+      'Practiced bug reporting and retesting.'
     ],
 
     outcome: [
-      'Stronger understanding of end-to-end manual QA workflow.',
-      'Better test documentation and coverage thinking.',
-      'More confidence identifying edge cases and negative scenarios.',
-      'Portfolio-ready evidence of structured QA practice.'
-    ],
+      'Manual testing workflow understanding.',
+      'Better test documentation.',
+      'Improved test coverage thinking.',
+      'Defect reporting practice.'
+    ]
 
-    note:
-      'This project is presented as a practice/demo QA project and is not represented as professional employment experience.'
   },
 
+
   biponibd: {
-    type: 'Live / Real QA Project',
-    title: 'BiponiBD Website QA',
+
+    type:
+      'Live / Real QA Project',
+
+    title:
+      'BiponiBD Website QA',
 
     description:
-      'A live-project testing experience on an evolving e-commerce web application where testing happens alongside active development and changing features.',
+      'A live-project testing experience on an evolving e-commerce application where testing happens alongside active development.',
 
     work: [
-      'Performed functional and exploratory checks on available features.',
-      'Reviewed incomplete and developing flows from a user-quality perspective.',
-      'Reported issues using clear reproduction steps, evidence, and user impact.',
-      'Adapted testing to a practical development workflow without assuming a formal dedicated QA process.'
+      'Performed functional checks.',
+      'Performed exploratory testing.',
+      'Reviewed developing features.',
+      'Reported issues with reproduction information.'
     ],
 
     outcome: [
-      'Real-world testing exposure beyond a demo application.',
-      'Improved prioritization when features and requirements are still evolving.',
-      'Stronger communication of defects, observations, and quality risks.',
-      'Practical understanding of QA responsibilities in a live product environment.'
-    ],
+      'Real-world QA exposure.',
+      'Improved defect communication.',
+      'Better testing prioritization.',
+      'Understanding of live product testing.'
+    ]
 
-    note:
-      'Only non-confidential information is intended for this portfolio. Private credentials, internal data, customer information, and restricted project details are not included.'
   }
+
 };
 
+
+
+/* =========================
+   THEME TOGGLE
+========================= */
+
 function setTheme(theme) {
+
   root.dataset.theme = theme;
 
   localStorage.setItem(
@@ -98,555 +125,390 @@ function setTheme(theme) {
     theme
   );
 
-  if (themeIcon) {
-    themeIcon.textContent =
-      theme === 'dark'
-        ? '☼'
-        : '☾';
-  }
-
-  if (themeToggle) {
-    themeToggle.setAttribute(
-      'aria-label',
-      theme === 'dark'
-        ? 'Switch to light theme'
-        : 'Switch to dark theme'
-    );
-  }
 }
 
+
 const savedTheme =
-  localStorage.getItem('portfolio-theme');
+  localStorage.getItem(
+    'portfolio-theme'
+  );
+
 
 setTheme(
-  savedTheme === 'light' ||
-  savedTheme === 'dark'
-    ? savedTheme
+  savedTheme === 'light'
+    ? 'light'
     : 'dark'
 );
+
 
 themeToggle?.addEventListener(
   'click',
   () => {
-    setTheme(
+
+    const nextTheme =
       root.dataset.theme === 'dark'
         ? 'light'
-        : 'dark'
-    );
+        : 'dark';
+
+    setTheme(nextTheme);
+
   }
 );
 
-function closeMobileNav() {
-  navLinks?.classList.remove('open');
 
-  navToggle?.classList.remove('active');
 
-  navToggle?.setAttribute(
-    'aria-expanded',
-    'false'
-  );
-
-  document.body.classList.remove(
-    'menu-open'
-  );
-}
+/* =========================
+   MOBILE NAVIGATION
+========================= */
 
 navToggle?.addEventListener(
   'click',
   () => {
-    const isOpen =
-      navLinks?.classList.toggle('open');
 
-    navToggle.classList.toggle(
-      'active',
-      Boolean(isOpen)
-    );
+    const isOpen =
+      navLinks.classList.toggle(
+        'open'
+      );
 
     navToggle.setAttribute(
       'aria-expanded',
-      String(Boolean(isOpen))
+      String(isOpen)
     );
 
-    document.body.classList.toggle(
-      'menu-open',
-      Boolean(isOpen)
-    );
   }
 );
 
-navAnchors.forEach((link) =>
-  link.addEventListener(
-    'click',
-    closeMobileNav
+
+document
+  .querySelectorAll(
+    '.nav-links a'
   )
-);
+  .forEach((link) => {
 
-function updateScrollUI() {
-  siteHeader?.classList.toggle(
-    'scrolled',
-    window.scrollY > 12
-  );
+    link.addEventListener(
+      'click',
+      () => {
 
-  const scrollable =
-    document.documentElement.scrollHeight -
-    window.innerHeight;
+        navLinks?.classList.remove(
+          'open'
+        );
 
-  const progress =
-    scrollable > 0
-      ? (window.scrollY / scrollable) * 100
-      : 0;
+        navToggle?.setAttribute(
+          'aria-expanded',
+          'false'
+        );
 
-  if (scrollProgress) {
-    scrollProgress.style.width =
-      `${Math.min(progress, 100)}%`;
-  }
-
-  backToTop?.classList.toggle(
-    'visible',
-    window.scrollY > 650
-  );
-}
-
-window.addEventListener(
-  'scroll',
-  updateScrollUI,
-  {
-    passive: true
-  }
-);
-
-updateScrollUI();
-
-backToTop?.addEventListener(
-  'click',
-  () => {
-    window.scrollTo({
-      top: 0,
-      behavior:
-        prefersReducedMotion
-          ? 'auto'
-          : 'smooth'
-    });
-  }
-);
-
-filterButtons.forEach((button) => {
-  button.addEventListener(
-    'click',
-    () => {
-      const filter =
-        button.dataset.filter;
-
-      filterButtons.forEach(
-        (item) =>
-          item.classList.remove(
-            'active'
-          )
-      );
-
-      button.classList.add(
-        'active'
-      );
-
-      projectCards.forEach(
-        (card) => {
-          const shouldShow =
-            filter === 'all' ||
-            card.dataset.category ===
-              filter;
-
-          card.classList.toggle(
-            'hidden',
-            !shouldShow
-          );
-        }
-      );
-    }
-  );
-});
-
-function closeProjectModal() {
-  if (!projectModal) return;
-
-  if (
-    typeof projectModal.close ===
-      'function' &&
-    projectModal.open
-  ) {
-    projectModal.close();
-  } else {
-    projectModal.removeAttribute(
-      'open'
+      }
     );
+
+  });
+
+
+
+/* =========================
+   PROJECT FILTER
+========================= */
+
+filterButtons.forEach(
+  (button) => {
+
+    button.addEventListener(
+      'click',
+      () => {
+
+        filterButtons.forEach(
+          (item) => {
+
+            item.classList.remove(
+              'active'
+            );
+
+          }
+        );
+
+
+        button.classList.add(
+          'active'
+        );
+
+
+        const filter =
+          button.dataset.filter;
+
+
+        projectCards.forEach(
+          (card) => {
+
+            const show =
+              filter === 'all' ||
+              card.dataset.category ===
+                filter;
+
+            card.classList.toggle(
+              'hidden',
+              !show
+            );
+
+          }
+        );
+
+      }
+    );
+
   }
-}
+);
+
+
+
+/* =========================
+   PROJECT MODAL
+========================= */
 
 function openProjectModal(
   projectKey
 ) {
-  const content =
-    projectContent[projectKey];
 
-  if (
-    !content ||
-    !projectModal
-  ) {
+  const data =
+    projectContent[
+      projectKey
+    ];
+
+
+  if (!data || !modal) {
+
     return;
+
   }
+
 
   document.getElementById(
     'modalType'
   ).textContent =
-    content.type;
+    data.type;
+
 
   document.getElementById(
     'modalTitle'
   ).textContent =
-    content.title;
+    data.title;
+
 
   document.getElementById(
     'modalDescription'
   ).textContent =
-    content.description;
+    data.description;
 
-  document.getElementById(
-    'modalNote'
-  ).textContent =
-    content.note;
 
   document.getElementById(
     'modalWork'
   ).innerHTML =
-    content.work
+    data.work
       .map(
         (item) =>
           `<li>${item}</li>`
       )
       .join('');
+
 
   document.getElementById(
     'modalOutcome'
   ).innerHTML =
-    content.outcome
+    data.outcome
       .map(
         (item) =>
           `<li>${item}</li>`
       )
       .join('');
 
-  if (
-    typeof projectModal.showModal ===
-    'function'
-  ) {
-    projectModal.showModal();
-  } else {
-    projectModal.setAttribute(
-      'open',
-      ''
-    );
-  }
+
+  modal.showModal();
+
 }
 
-projectDetailButtons.forEach(
-  (button) => {
+
+document
+  .querySelectorAll(
+    '.project-details-btn'
+  )
+  .forEach((button) => {
+
     button.addEventListener(
       'click',
-      () =>
+      () => {
+
         openProjectModal(
           button.dataset.project
-        )
+        );
+
+      }
     );
-  }
-);
+
+  });
+
 
 modalClose?.addEventListener(
   'click',
-  closeProjectModal
-);
+  () => {
 
-projectModal?.addEventListener(
-  'click',
-  (event) => {
-    const rect =
-      projectModal.getBoundingClientRect();
+    modal.close();
 
-    const clickedOutside =
-      event.clientX < rect.left ||
-      event.clientX > rect.right ||
-      event.clientY < rect.top ||
-      event.clientY > rect.bottom;
-
-    if (clickedOutside) {
-      closeProjectModal();
-    }
   }
 );
 
-document.addEventListener(
-  'keydown',
-  (event) => {
-    if (
-      event.key === 'Escape'
-    ) {
-      closeMobileNav();
-      closeProjectModal();
-    }
-  }
-);
 
-function setFieldError(
-  field,
-  message
-) {
-  const row =
-    field.closest('.field-row');
 
-  row?.classList.add(
-    'invalid'
-  );
+/* =========================
+   CONTACT FORM
+========================= */
 
-  const error =
-    row?.querySelector(
-      '.error-message'
-    );
+function validEmail(email) {
 
-  if (error) {
-    error.textContent =
-      message;
-  }
-}
-
-function clearFieldError(field) {
-  const row =
-    field.closest('.field-row');
-
-  row?.classList.remove(
-    'invalid'
-  );
-
-  const error =
-    row?.querySelector(
-      '.error-message'
-    );
-
-  if (error) {
-    error.textContent = '';
-  }
-}
-
-function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(
     email
   );
+
 }
+
 
 contactForm?.addEventListener(
   'submit',
   (event) => {
+
     event.preventDefault();
 
-    if (formSuccess) {
-      formSuccess.textContent = '';
-    }
 
     const name =
-      contactForm.elements.name;
+      contactForm.elements
+        .name.value.trim();
+
 
     const email =
-      contactForm.elements.email;
+      contactForm.elements
+        .email.value.trim();
+
 
     const message =
-      contactForm.elements.message;
+      contactForm.elements
+        .message.value.trim();
 
-    let isValid = true;
 
-    [name, email, message].forEach(
-      clearFieldError
-    );
-
-    if (
-      name.value.trim().length < 2
-    ) {
-      setFieldError(
-        name,
-        'Please enter at least 2 characters.'
+    const status =
+      document.getElementById(
+        'formSuccess'
       );
 
-      isValid = false;
-    }
 
     if (
-      !isValidEmail(
-        email.value.trim()
-      )
+      name.length < 2 ||
+      !validEmail(email) ||
+      message.length < 10
     ) {
-      setFieldError(
-        email,
-        'Please enter a valid email address.'
-      );
 
-      isValid = false;
-    }
+      status.textContent =
+        'Please complete all fields correctly.';
 
-    if (
-      message.value.trim().length <
-      10
-    ) {
-      setFieldError(
-        message,
-        'Please write a message of at least 10 characters.'
-      );
-
-      isValid = false;
-    }
-
-    if (!isValid) {
       return;
+
     }
+
+
+    status.textContent =
+      'Opening your email application...';
+
 
     const subject =
       encodeURIComponent(
-        `Portfolio message from ${name.value.trim()}`
+        `Portfolio message from ${name}`
       );
+
 
     const body =
       encodeURIComponent(
-        `Name: ${name.value.trim()}\nEmail: ${email.value.trim()}\n\nMessage:\n${message.value.trim()}`
+        `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
       );
 
-    if (formSuccess) {
-      formSuccess.textContent =
-        '✓ Message validated. Opening your email app...';
-    }
 
     window.location.href =
       `mailto:nasifparvez732@gmail.com?subject=${subject}&body=${body}`;
+
   }
 );
 
-const prefersReducedMotion =
-  window.matchMedia(
-    '(prefers-reduced-motion: reduce)'
-  ).matches;
 
-if (prefersReducedMotion) {
-  document
-    .querySelectorAll('.reveal')
-    .forEach(
-      (element) =>
-        element.classList.add(
-          'visible'
-        )
-    );
-} else {
-  const revealObserver =
-    new IntersectionObserver(
-      (
-        entries,
-        observer
-      ) => {
-        entries.forEach(
-          (entry) => {
-            if (
-              entry.isIntersecting
-            ) {
-              entry.target.classList.add(
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+const observer =
+  new IntersectionObserver(
+    (entries) => {
+
+      entries.forEach(
+        (entry) => {
+
+          if (
+            entry.isIntersecting
+          ) {
+
+            entry.target
+              .classList.add(
                 'visible'
               );
 
-              observer.unobserve(
-                entry.target
-              );
-            }
-          }
-        );
-      },
-      {
-        threshold: 0.12
-      }
-    );
-
-  document
-    .querySelectorAll(
-      '.reveal'
-    )
-    .forEach(
-      (element) =>
-        revealObserver.observe(
-          element
-        )
-    );
-}
-
-const sections = [
-  ...document.querySelectorAll(
-    'main section[id]'
-  )
-];
-
-const sectionObserver =
-  new IntersectionObserver(
-    (entries) => {
-      entries.forEach(
-        (entry) => {
-          if (
-            !entry.isIntersecting
-          ) {
-            return;
           }
 
-          navAnchors.forEach(
-            (link) => {
-              const target =
-                link
-                  .getAttribute(
-                    'href'
-                  )
-                  .slice(1);
-
-              const isActive =
-                target ===
-                entry.target.id;
-
-              link.classList.toggle(
-                'active',
-                isActive
-              );
-
-              if (isActive) {
-                link.setAttribute(
-                  'aria-current',
-                  'page'
-                );
-              } else {
-                link.removeAttribute(
-                  'aria-current'
-                );
-              }
-            }
-          );
         }
       );
+
     },
     {
-      rootMargin:
-        '-35% 0px -55% 0px'
+      threshold: 0.12
     }
   );
 
-sections.forEach(
-  (section) =>
-    sectionObserver.observe(
-      section
-    )
-);
 
-const currentYear =
-  document.getElementById(
-    'currentYear'
+document
+  .querySelectorAll(
+    '.reveal'
+  )
+  .forEach(
+    (element) => {
+
+      observer.observe(
+        element
+      );
+
+    }
   );
 
-if (currentYear) {
-  currentYear.textContent =
-    new Date().getFullYear();
-}
+
+
+/* =========================
+   BACK TO TOP
+========================= */
+
+window.addEventListener(
+  'scroll',
+  () => {
+
+    backToTop?.classList.toggle(
+      'visible',
+      window.scrollY > 600
+    );
+
+  }
+);
+
+
+backToTop?.addEventListener(
+  'click',
+  () => {
+
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+
+  }
+);

@@ -9,21 +9,16 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>
-    Nasif Parvez | SQA Portfolio
-  </title>
+  <title>Nasif Parvez | SQA Portfolio</title>
 
-  <link
-    rel="stylesheet"
-    href="style.css"
-  >
+  <link rel="stylesheet" href="style.css">
 </head>
 
 
 <body>
 
   <!-- =========================
-       HEADER / NAVIGATION
+       HEADER
   ========================== -->
 
   <header
@@ -34,8 +29,8 @@
     <nav class="nav container">
 
       <a
-        class="brand"
         href="#home"
+        class="brand"
       >
         <span class="brand-mark">
           NP
@@ -47,7 +42,10 @@
       </a>
 
 
-      <div class="nav-links">
+      <div
+        class="nav-links"
+        id="navLinks"
+      >
 
         <a href="#home">
           Home
@@ -75,6 +73,35 @@
 
       </div>
 
+
+      <div class="nav-actions">
+
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          type="button"
+          aria-label="Switch theme"
+        >
+          <span class="theme-icon">
+            ☼
+          </span>
+        </button>
+
+
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+
     </nav>
 
   </header>
@@ -95,7 +122,7 @@
       <div class="container hero-grid">
 
 
-        <div class="hero-content">
+        <div class="hero-content reveal">
 
           <p class="hero-kicker">
             Hello, I'm
@@ -181,14 +208,14 @@
 
 
 
-        <div class="hero-visual">
+        <div class="hero-visual reveal">
 
           <div class="portrait-card">
 
             <div class="portrait-frame">
 
               <!--
-                Later replace this placeholder with:
+                Replace this placeholder later with:
 
                 <img
                   src="profile-photo.jpg"
@@ -246,7 +273,7 @@
 
       <div class="container">
 
-        <div class="section-heading">
+        <div class="section-heading reveal">
 
           <p class="eyebrow">
             About Me
@@ -263,7 +290,7 @@
         <div class="about-grid">
 
 
-          <div class="about-content">
+          <div class="about-content reveal">
 
             <p>
               I am a Computer Science and Engineering
@@ -296,7 +323,7 @@
 
 
 
-          <div class="about-highlights">
+          <div class="about-highlights reveal">
 
             <article class="about-card">
 
@@ -311,9 +338,9 @@
                 </h3>
 
                 <p>
-                  I focus on understanding user flows,
-                  identifying risks, and checking whether
-                  software behaves as expected.
+                  Understanding user flows, identifying
+                  risks, and checking whether software
+                  behaves as expected.
                 </p>
 
               </div>
@@ -334,8 +361,7 @@
                 </h3>
 
                 <p>
-                  I strengthen my QA knowledge by
-                  practicing on realistic applications
+                  Practicing on realistic applications
                   and documenting the complete testing
                   process.
                 </p>
@@ -358,9 +384,9 @@
                 </h3>
 
                 <p>
-                  I am gradually expanding from manual
-                  testing toward API testing, automation,
-                  SQL, and other modern QA skills.
+                  Expanding from manual testing toward
+                  API testing, automation, SQL, and
+                  other modern QA skills.
                 </p>
 
               </div>
@@ -388,7 +414,7 @@
 
       <div class="container">
 
-        <div class="section-heading centered">
+        <div class="section-heading centered reveal">
 
           <p class="eyebrow">
             Skills & Tools
@@ -410,7 +436,7 @@
         <div class="skills-grid">
 
 
-          <article class="skill-card">
+          <article class="skill-card reveal">
 
             <div class="skill-card-top">
 
@@ -434,9 +460,8 @@
 
 
             <p class="skill-description">
-              Understanding the software testing process
-              and validating web application behavior
-              through structured manual testing.
+              Validating application behavior through
+              structured manual testing approaches.
             </p>
 
 
@@ -456,7 +481,7 @@
 
 
 
-          <article class="skill-card">
+          <article class="skill-card reveal">
 
             <div class="skill-card-top">
 
@@ -481,8 +506,7 @@
 
             <p class="skill-description">
               Creating organized testing documentation
-              that helps define coverage, execute tests,
-              and communicate software issues clearly.
+              and communicating software issues clearly.
             </p>
 
 
@@ -502,7 +526,7 @@
 
 
 
-          <article class="skill-card">
+          <article class="skill-card reveal">
 
             <div class="skill-card-top">
 
@@ -526,9 +550,9 @@
 
 
             <p class="skill-description">
-              A technical foundation in programming,
-              databases, and version control that supports
-              my understanding of software systems.
+              Programming, database, and version-control
+              knowledge supporting my understanding
+              of software systems.
             </p>
 
 
@@ -556,7 +580,7 @@
 
 
     <!-- =========================
-         FEATURED QA PROJECTS
+         QA PROJECTS
     ========================== -->
 
     <section
@@ -566,7 +590,7 @@
 
       <div class="container">
 
-        <div class="section-heading centered">
+        <div class="section-heading centered reveal">
 
           <p class="eyebrow">
             Featured QA Projects
@@ -578,10 +602,38 @@
           </h2>
 
           <p class="section-description">
-            These projects represent structured practice
-            on a demo application and testing exposure
-            on a live product.
+            Practice testing on a demo application
+            and QA exposure on a live product.
           </p>
+
+        </div>
+
+
+        <div class="project-filters reveal">
+
+          <button
+            class="filter-btn active"
+            type="button"
+            data-filter="all"
+          >
+            All
+          </button>
+
+          <button
+            class="filter-btn"
+            type="button"
+            data-filter="practice"
+          >
+            Practice
+          </button>
+
+          <button
+            class="filter-btn"
+            type="button"
+            data-filter="live"
+          >
+            Live
+          </button>
 
         </div>
 
@@ -589,13 +641,16 @@
         <div class="project-grid">
 
 
-          <article class="project-card">
+          <article
+            class="project-card reveal"
+            data-category="practice"
+          >
 
             <div class="project-card-header">
 
               <div>
 
-                <span class="project-type practice">
+                <span class="project-type">
                   Practice / Demo QA Project
                 </span>
 
@@ -605,7 +660,6 @@
 
               </div>
 
-
               <span class="project-number">
                 01
               </span>
@@ -614,11 +668,9 @@
 
 
             <p class="project-description">
-              A structured manual testing practice project
-              using the OrangeHRM demo application to
-              understand test documentation, execution,
-              defect reporting, retesting, and regression
-              thinking.
+              A structured manual testing practice
+              project using the OrangeHRM demo
+              application.
             </p>
 
 
@@ -636,82 +688,26 @@
             <div class="project-metrics">
 
               <div>
-
-                <small>
-                  Coverage
-                </small>
-
-                <strong>
-                  Multi-module
-                </strong>
-
+                <small>Coverage</small>
+                <strong>Multi-module</strong>
               </div>
-
 
               <div>
-
-                <small>
-                  Documentation
-                </small>
-
-                <strong>
-                  Scenario → Test Case
-                </strong>
-
+                <small>Documentation</small>
+                <strong>Scenario → Test Case</strong>
               </div>
-
 
               <div>
-
-                <small>
-                  QA Cycle
-                </small>
-
-                <strong>
-                  Execute → Report → Retest
-                </strong>
-
+                <small>QA Cycle</small>
+                <strong>Execute → Report → Retest</strong>
               </div>
-
-            </div>
-
-
-            <div class="project-work">
-
-              <p class="project-work-title">
-                Key Activities
-              </p>
-
-              <ul>
-
-                <li>
-                  Explored important application modules
-                  and user flows.
-                </li>
-
-                <li>
-                  Created test scenarios, test cases,
-                  and supporting test data.
-                </li>
-
-                <li>
-                  Executed tests using expected and
-                  actual results.
-                </li>
-
-                <li>
-                  Practiced bug reporting, retesting,
-                  smoke testing, and regression testing.
-                </li>
-
-              </ul>
 
             </div>
 
 
             <button
-              type="button"
               class="project-details-btn"
+              type="button"
               data-project="orangehrm"
             >
               View Project Details
@@ -721,7 +717,10 @@
 
 
 
-          <article class="project-card featured">
+          <article
+            class="project-card featured reveal"
+            data-category="live"
+          >
 
             <div class="featured-label">
               Live Project
@@ -732,7 +731,7 @@
 
               <div>
 
-                <span class="project-type live">
+                <span class="project-type">
                   Live / Real QA Project
                 </span>
 
@@ -741,7 +740,6 @@
                 </h3>
 
               </div>
-
 
               <span class="project-number">
                 02
@@ -752,9 +750,8 @@
 
             <p class="project-description">
               Testing exposure on a live and evolving
-              e-commerce website where features may
-              change during development and QA work must
-              adapt to a practical product environment.
+              e-commerce application alongside active
+              product development.
             </p>
 
 
@@ -772,82 +769,26 @@
             <div class="project-metrics">
 
               <div>
-
-                <small>
-                  Environment
-                </small>
-
-                <strong>
-                  Live Product
-                </strong>
-
+                <small>Environment</small>
+                <strong>Live Product</strong>
               </div>
-
 
               <div>
-
-                <small>
-                  Focus
-                </small>
-
-                <strong>
-                  Functional + Exploratory
-                </strong>
-
+                <small>Focus</small>
+                <strong>Functional + Exploratory</strong>
               </div>
-
 
               <div>
-
-                <small>
-                  Communication
-                </small>
-
-                <strong>
-                  Issue + Impact
-                </strong>
-
+                <small>Communication</small>
+                <strong>Issue + Impact</strong>
               </div>
-
-            </div>
-
-
-            <div class="project-work">
-
-              <p class="project-work-title">
-                Key Activities
-              </p>
-
-              <ul>
-
-                <li>
-                  Checked available features through
-                  functional and exploratory testing.
-                </li>
-
-                <li>
-                  Reviewed developing and incomplete
-                  flows from a user-quality perspective.
-                </li>
-
-                <li>
-                  Documented issues with reproduction
-                  details and expected behavior.
-                </li>
-
-                <li>
-                  Adapted testing to an evolving product
-                  without assuming a formal QA process.
-                </li>
-
-              </ul>
 
             </div>
 
 
             <button
-              type="button"
               class="project-details-btn"
+              type="button"
               data-project="biponibd"
             >
               View Project Details
@@ -855,27 +796,6 @@
 
           </article>
 
-
-        </div>
-
-
-        <div class="project-note">
-
-          <span class="project-note-icon">
-            ✓
-          </span>
-
-          <p>
-
-            <strong>
-              Project transparency:
-            </strong>
-
-            OrangeHRM is presented as a practice/demo
-            testing project, while BiponiBD represents
-            live-project QA exposure.
-
-          </p>
 
         </div>
 
@@ -896,7 +816,7 @@
 
       <div class="container">
 
-        <div class="section-heading centered">
+        <div class="section-heading centered reveal">
 
           <p class="eyebrow">
             My QA Workflow
@@ -907,125 +827,64 @@
             to manual testing.
           </h2>
 
-          <p class="section-description">
-            I follow a simple testing workflow to move
-            from understanding a feature to validating
-            fixes and checking related areas.
-          </p>
-
         </div>
 
 
         <div class="workflow-grid">
 
-
-          <article class="workflow-card">
-
-            <span>
-              01
-            </span>
-
-            <h3>
-              Understand
-            </h3>
-
+          <article class="workflow-card reveal">
+            <span>01</span>
+            <h3>Understand</h3>
             <p>
-              Review the feature, expected behavior,
-              user flow, and available requirements.
+              Review feature behavior,
+              requirements, and user flow.
             </p>
-
           </article>
 
-
-          <article class="workflow-card">
-
-            <span>
-              02
-            </span>
-
-            <h3>
-              Design
-            </h3>
-
+          <article class="workflow-card reveal">
+            <span>02</span>
+            <h3>Design</h3>
             <p>
-              Prepare relevant test scenarios, test
-              cases, and required test data.
+              Prepare test scenarios,
+              test cases, and test data.
             </p>
-
           </article>
 
-
-          <article class="workflow-card">
-
-            <span>
-              03
-            </span>
-
-            <h3>
-              Execute
-            </h3>
-
+          <article class="workflow-card reveal">
+            <span>03</span>
+            <h3>Execute</h3>
             <p>
-              Perform the tests and compare actual
-              application behavior with expected results.
+              Perform tests and compare
+              expected and actual results.
             </p>
-
           </article>
 
-
-          <article class="workflow-card">
-
-            <span>
-              04
-            </span>
-
-            <h3>
-              Report
-            </h3>
-
+          <article class="workflow-card reveal">
+            <span>04</span>
+            <h3>Report</h3>
             <p>
-              Document defects with clear reproduction
-              steps, evidence, and expected behavior.
+              Document defects with
+              reproduction information.
             </p>
-
           </article>
 
-
-          <article class="workflow-card">
-
-            <span>
-              05
-            </span>
-
-            <h3>
-              Retest
-            </h3>
-
+          <article class="workflow-card reveal">
+            <span>05</span>
+            <h3>Retest</h3>
             <p>
-              Verify resolved issues after fixes are
-              provided by the development team.
+              Verify fixes after the issue
+              has been resolved.
             </p>
-
           </article>
 
-
-          <article class="workflow-card">
-
-            <span>
-              06
-            </span>
-
-            <h3>
-              Regression
-            </h3>
-
+          <article class="workflow-card reveal">
+            <span>06</span>
+            <h3>Regression</h3>
             <p>
-              Check related areas to make sure recent
-              changes have not introduced new problems.
+              Check related areas after
+              software changes.
             </p>
-
           </article>
-
 
         </div>
 
@@ -1046,7 +905,7 @@
 
       <div class="container">
 
-        <div class="section-heading">
+        <div class="section-heading reveal">
 
           <p class="eyebrow">
             Technical Projects
@@ -1062,8 +921,7 @@
 
         <div class="technical-grid">
 
-
-          <article class="technical-card">
+          <article class="technical-card reveal">
 
             <span class="technical-number">
               01
@@ -1074,29 +932,21 @@
             </h3>
 
             <p>
-              A Python-based mini project for managing
-              personal contact records with functionality
-              for adding, updating, searching, and
-              deleting contacts.
+              A Python project for adding,
+              updating, searching, and deleting
+              contact records.
             </p>
 
             <div class="skill-tags">
-
-              <span>
-                Python
-              </span>
-
-              <span>
-                Problem Solving
-              </span>
-
+              <span>Python</span>
+              <span>Problem Solving</span>
             </div>
 
           </article>
 
 
 
-          <article class="technical-card">
+          <article class="technical-card reveal">
 
             <span class="technical-number">
               02
@@ -1107,30 +957,18 @@
             </h3>
 
             <p>
-              A backend-focused project covering user
-              registration, login validation, and
-              database interaction while developing
-              understanding of application logic.
+              Backend-focused project covering
+              user registration, login validation,
+              and database interaction.
             </p>
 
             <div class="skill-tags">
-
-              <span>
-                Java
-              </span>
-
-              <span>
-                MySQL
-              </span>
-
-              <span>
-                Backend Logic
-              </span>
-
+              <span>Java</span>
+              <span>MySQL</span>
+              <span>Backend Logic</span>
             </div>
 
           </article>
-
 
         </div>
 
@@ -1151,7 +989,7 @@
 
       <div class="container">
 
-        <div class="section-heading centered">
+        <div class="section-heading centered reveal">
 
           <p class="eyebrow">
             Learning Roadmap
@@ -1162,91 +1000,46 @@
             step by step.
           </h2>
 
-          <p class="section-description">
-            These areas represent my current or planned
-            learning direction and are not presented
-            as expert-level skills.
-          </p>
-
         </div>
 
 
         <div class="roadmap-grid">
 
-
-          <article class="roadmap-card">
-
-            <span class="roadmap-status">
-              Learning
-            </span>
-
-            <h3>
-              API Testing
-            </h3>
-
+          <article class="roadmap-card reveal">
+            <span class="roadmap-status">Learning</span>
+            <h3>API Testing</h3>
             <p>
-              Building knowledge of REST APIs,
-              requests, responses, status codes,
-              and Postman-based API validation.
+              Learning REST APIs, status codes,
+              requests, responses, and Postman.
             </p>
-
           </article>
 
-
-          <article class="roadmap-card">
-
-            <span class="roadmap-status">
-              Planned
-            </span>
-
-            <h3>
-              Test Automation
-            </h3>
-
+          <article class="roadmap-card reveal">
+            <span class="roadmap-status">Planned</span>
+            <h3>Test Automation</h3>
             <p>
-              Moving toward web automation after
-              developing a strong foundation in
-              manual testing.
+              Moving toward browser automation
+              after strengthening manual testing.
             </p>
-
           </article>
 
-
-          <article class="roadmap-card">
-
-            <span class="roadmap-status">
-              Developing
-            </span>
-
-            <h3>
-              SQL for QA
-            </h3>
-
+          <article class="roadmap-card reveal">
+            <span class="roadmap-status">Developing</span>
+            <h3>SQL for QA</h3>
             <p>
               Improving database querying skills
-              to support backend and data validation.
+              for data validation.
             </p>
-
           </article>
 
-
-          <article class="roadmap-card">
-
-            <span class="roadmap-status">
-              Planned
-            </span>
-
-            <h3>
-              Performance Testing
-            </h3>
-
+          <article class="roadmap-card reveal">
+            <span class="roadmap-status">Planned</span>
+            <h3>Performance Testing</h3>
             <p>
-              Planning to learn the fundamentals of
-              application performance and load testing.
+              Planning to learn performance
+              and load-testing fundamentals.
             </p>
-
           </article>
-
 
         </div>
 
@@ -1267,7 +1060,7 @@
 
       <div class="container">
 
-        <div class="section-heading">
+        <div class="section-heading reveal">
 
           <p class="eyebrow">
             Education
@@ -1282,15 +1075,13 @@
 
         <div class="education-list">
 
-
-          <article class="education-card">
+          <article class="education-card reveal">
 
             <div class="education-year">
               2023 — 2027
             </div>
 
             <div>
-
               <h3>
                 B.Sc. in Computer Science & Engineering
               </h3>
@@ -1302,48 +1093,42 @@
               <p class="education-result">
                 CGPA: 3.64
               </p>
-
             </div>
 
           </article>
 
 
-
-          <article class="education-card">
+          <article class="education-card reveal">
 
             <div class="education-year">
               2020 — 2022
             </div>
 
             <div>
-
               <h3>
                 Higher Secondary Certificate
               </h3>
 
               <p class="education-institute">
-                Sonargaon Star Flower S.R School
-                and College
+                Sonargaon Star Flower S.R
+                School and College
               </p>
 
               <p class="education-result">
                 GPA: 5.00
               </p>
-
             </div>
 
           </article>
 
 
-
-          <article class="education-card">
+          <article class="education-card reveal">
 
             <div class="education-year">
               2018 — 2020
             </div>
 
             <div>
-
               <h3>
                 Secondary School Certificate
               </h3>
@@ -1356,11 +1141,9 @@
               <p class="education-result">
                 GPA: 4.44
               </p>
-
             </div>
 
           </article>
-
 
         </div>
 
@@ -1381,7 +1164,7 @@
 
       <div class="container">
 
-        <div class="section-heading centered">
+        <div class="section-heading centered reveal">
 
           <p class="eyebrow">
             Contact
@@ -1392,9 +1175,8 @@
           </h2>
 
           <p class="section-description">
-            I am interested in learning opportunities,
-            SQA internships, and junior QA roles where I
-            can continue building practical experience.
+            Open to SQA internships, junior QA
+            opportunities, and learning opportunities.
           </p>
 
         </div>
@@ -1402,32 +1184,21 @@
 
         <div class="contact-grid">
 
-
-          <div class="contact-info">
+          <div class="contact-info reveal">
 
             <a
               class="contact-card"
               href="mailto:nasifparvez732@gmail.com"
             >
-
-              <span class="contact-icon">
-                @
-              </span>
+              <span class="contact-icon">@</span>
 
               <div>
-
-                <small>
-                  Gmail
-                </small>
-
+                <small>Gmail</small>
                 <strong>
                   nasifparvez732@gmail.com
                 </strong>
-
               </div>
-
             </a>
-
 
 
             <a
@@ -1436,25 +1207,15 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-
-              <span class="contact-icon">
-                in
-              </span>
+              <span class="contact-icon">in</span>
 
               <div>
-
-                <small>
-                  LinkedIn
-                </small>
-
+                <small>LinkedIn</small>
                 <strong>
                   linkedin.com/in/nniloy/
                 </strong>
-
               </div>
-
             </a>
-
 
 
             <a
@@ -1463,54 +1224,22 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-
-              <span class="contact-icon">
-                GH
-              </span>
+              <span class="contact-icon">GH</span>
 
               <div>
-
-                <small>
-                  GitHub
-                </small>
-
+                <small>GitHub</small>
                 <strong>
                   github.com/nasifparvezst
                 </strong>
-
               </div>
-
             </a>
-
-
-            <div class="contact-card">
-
-              <span class="contact-icon">
-                📍
-              </span>
-
-              <div>
-
-                <small>
-                  Location
-                </small>
-
-                <strong>
-                  Dhaka, Bangladesh
-                </strong>
-
-              </div>
-
-            </div>
 
           </div>
 
 
 
-          <!-- CONTACT FORM -->
-
           <form
-            class="contact-form"
+            class="contact-form reveal"
             id="contactForm"
           >
 
@@ -1521,13 +1250,11 @@
               </label>
 
               <input
-                type="text"
                 id="name"
                 name="name"
+                type="text"
                 placeholder="Your name"
               >
-
-              <span class="error-message"></span>
 
             </div>
 
@@ -1539,13 +1266,11 @@
               </label>
 
               <input
-                type="email"
                 id="email"
                 name="email"
+                type="email"
                 placeholder="your@email.com"
               >
-
-              <span class="error-message"></span>
 
             </div>
 
@@ -1563,14 +1288,12 @@
                 placeholder="Write your message..."
               ></textarea>
 
-              <span class="error-message"></span>
-
             </div>
 
 
             <button
-              type="submit"
               class="btn btn-primary contact-submit"
+              type="submit"
             >
               Send via Email
             </button>
@@ -1583,21 +1306,89 @@
 
           </form>
 
-
         </div>
 
       </div>
 
     </section>
 
-
   </main>
 
 
 
   <!-- =========================
-       FOOTER
+       PROJECT DETAILS MODAL
   ========================== -->
+
+  <dialog
+    class="project-modal"
+    id="projectModal"
+  >
+
+    <button
+      class="modal-close"
+      id="modalClose"
+      type="button"
+      aria-label="Close project details"
+    >
+      ×
+    </button>
+
+
+    <p
+      class="modal-type"
+      id="modalType"
+    ></p>
+
+
+    <h2 id="modalTitle"></h2>
+
+
+    <p
+      class="modal-description"
+      id="modalDescription"
+    ></p>
+
+
+    <div class="modal-grid">
+
+      <div>
+
+        <h3>
+          What I Worked On
+        </h3>
+
+        <ul id="modalWork"></ul>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Learning Outcome
+        </h3>
+
+        <ul id="modalOutcome"></ul>
+
+      </div>
+
+    </div>
+
+  </dialog>
+
+
+
+  <button
+    class="back-to-top"
+    id="backToTop"
+    type="button"
+    aria-label="Back to top"
+  >
+    ↑
+  </button>
+
+
 
   <footer class="site-footer">
 
@@ -1616,9 +1407,7 @@
   </footer>
 
 
-
   <script src="script.js"></script>
 
 </body>
-
 </html>
