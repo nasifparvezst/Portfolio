@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8">
@@ -9,13 +9,55 @@
     content="width=device-width, initial-scale=1.0"
   >
 
+  <meta
+    name="description"
+    content="Nasif Parvez - aspiring Software Quality Assurance Engineer portfolio featuring manual testing, QA projects, technical projects, and continuous learning."
+  >
+
+  <meta
+    name="author"
+    content="Nasif Parvez"
+  >
+
+  <meta
+    name="keywords"
+    content="Nasif Parvez, SQA Engineer, QA Engineer, Manual Testing, Software Testing, OrangeHRM, BiponiBD, Bangladesh"
+  >
+
+  <meta
+    property="og:title"
+    content="Nasif Parvez | SQA Portfolio"
+  >
+
+  <meta
+    property="og:description"
+    content="Aspiring SQA Engineer portfolio featuring manual testing, structured QA projects, live-project exposure, and technical foundations."
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
   <title>Nasif Parvez | SQA Portfolio</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
 
-
 <body>
+
+  <div
+    class="scroll-progress"
+    id="scrollProgress"
+    aria-hidden="true"
+  ></div>
+
+  <a
+    class="skip-link"
+    href="#main"
+  >
+    Skip to content
+  </a>
 
   <!-- =========================
        HEADER
@@ -26,78 +68,129 @@
     id="top"
   >
 
-    <nav class="nav container">
+    <nav
+      class="nav container"
+      aria-label="Primary navigation"
+    >
 
       <a
-        href="#home"
         class="brand"
+        href="#home"
+        aria-label="Nasif Parvez home"
       >
-        <span class="brand-mark">
-          NP
-        </span>
-
-        <span class="brand-text">
-          Nasif Parvez
-        </span>
+        <span class="brand-mark">NP</span>
+        <span class="brand-text">Nasif Parvez</span>
       </a>
 
+      <button
+        class="nav-toggle"
+        id="navToggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="navLinks"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
       <div
         class="nav-links"
         id="navLinks"
       >
 
-        <a href="#home">
-          Home
-        </a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">QA Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
 
-        <a href="#about">
-          About
-        </a>
+        <div
+          class="header-socials"
+          aria-label="Social media links"
+        >
 
-        <a href="#skills">
-          Skills
-        </a>
+          <a
+            class="header-social-link"
+            href="https://www.facebook.com/nniloy732/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M13.7 22v-8.7h2.9l.44-3.39H13.7V7.75c0-.98.27-1.65 1.68-1.65h1.79V3.07c-.31-.04-1.37-.13-2.61-.13-2.58 0-4.35 1.58-4.35 4.49v2.48H7.3v3.39h2.91V22h3.49z"
+              />
+            </svg>
+          </a>
 
-        <a href="#projects">
-          QA Projects
-        </a>
+          <a
+            class="header-social-link"
+            href="https://linkedin.com/in/nniloy/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45z"
+              />
+            </svg>
+          </a>
 
-        <a href="#education">
-          Education
-        </a>
+          <a
+            class="header-social-link"
+            href="https://www.instagram.com/nniloy732/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect
+                x="3"
+                y="3"
+                width="18"
+                height="18"
+                rx="5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <circle
+                cx="12"
+                cy="12"
+                r="4"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <circle
+                cx="17.4"
+                cy="6.7"
+                r="1.1"
+                fill="currentColor"
+              />
+            </svg>
+          </a>
 
-        <a href="#contact">
-          Contact
-        </a>
-
-      </div>
-
-
-      <div class="nav-actions">
+        </div>
 
         <button
           class="theme-toggle"
           id="themeToggle"
           type="button"
-          aria-label="Switch theme"
+          aria-label="Switch to light theme"
+          title="Toggle color theme"
         >
-          <span class="theme-icon">
+          <span
+            class="theme-icon"
+            aria-hidden="true"
+          >
             ☼
           </span>
-        </button>
-
-
-        <button
-          class="nav-toggle"
-          id="navToggle"
-          type="button"
-          aria-label="Open navigation menu"
-          aria-expanded="false"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
         </button>
 
       </div>
@@ -106,9 +199,7 @@
 
   </header>
 
-
-
-  <main>
+  <main id="main">
 
     <!-- =========================
          HERO
@@ -119,94 +210,90 @@
       id="home"
     >
 
+      <div
+        class="hero-glow hero-glow-one"
+        aria-hidden="true"
+      ></div>
+
+      <div
+        class="hero-glow hero-glow-two"
+        aria-hidden="true"
+      ></div>
+
       <div class="container hero-grid">
 
+        <div class="hero-copy reveal">
 
-        <div class="hero-content reveal">
+          <p class="hero-kicker">Hi, I’m</p>
 
-          <p class="hero-kicker">
-            Hello, I'm
-          </p>
-
-
-          <h1 class="hero-name">
-            Nasif Parvez
+          <h1
+            class="hero-name"
+            aria-label="Nasif Parvez"
+          >
+            <span
+              class="typed-name"
+              id="typedName"
+              data-text="Nasif Parvez"
+              aria-hidden="true"
+            >
+              Nasif Parvez
+            </span>
           </h1>
-
 
           <p class="hero-role">
             Aspiring Software Quality Assurance Engineer
           </p>
 
-
           <p class="hero-text">
-            I am a Computer Science and Engineering
-            student focused on Software Quality Assurance.
-            I enjoy understanding how software works,
-            identifying issues, designing meaningful test
-            cases, and helping improve the overall quality
-            of digital products.
+            I am a final-year Computer Science and Engineering
+            student focused on building practical QA skills
+            through structured manual testing, test design,
+            bug reporting, and real-world web application testing.
           </p>
-
 
           <div class="hero-actions">
 
             <a
-              href="#projects"
               class="btn btn-primary"
+              href="#projects"
             >
               Explore QA Projects
             </a>
 
             <a
-              href="#contact"
               class="btn btn-secondary"
+              href="#contact"
             >
               Contact Me
             </a>
 
           </div>
 
-
-          <div class="hero-proof">
+          <div
+            class="hero-proof"
+            aria-label="Quick profile summary"
+          >
 
             <div>
-              <strong>
-                Manual QA
-              </strong>
-
-              <span>
-                Current Focus
-              </span>
+              <strong>Manual QA</strong>
+              <span>Current Focus</span>
             </div>
 
-
             <div>
-              <strong>
-                2 QA Projects
-              </strong>
-
-              <span>
-                Practice + Live
-              </span>
+              <strong>2</strong>
+              <span>Featured QA Projects</span>
             </div>
 
-
             <div>
-              <strong>
-                Dhaka
-              </strong>
-
-              <span>
-                Bangladesh
-              </span>
+              <strong>Dhaka</strong>
+              <span>Bangladesh</span>
             </div>
 
           </div>
 
         </div>
 
-
+        <!-- PROFILE PHOTO -->
 
         <div class="hero-visual reveal">
 
@@ -214,181 +301,151 @@
 
             <div class="portrait-frame">
 
-              <!--
-                Replace this placeholder later with:
+              <img
+                src="ForCV.png"
+                alt="Portrait of Nasif Parvez"
+                class="hero-photo"
+                id="heroPhoto"
+              >
 
-                <img
-                  src="profile-photo.jpg"
-                  alt="Nasif Parvez"
-                  class="hero-photo"
-                >
-              -->
-
-              <div class="portrait-placeholder">
-
-                <span>
-                  NP
-                </span>
-
-                <small>
-                  Profile Photo
-                </small>
-
+              <div
+                class="portrait-placeholder"
+                id="photoFallback"
+                aria-hidden="true"
+              >
+                <span>NP</span>
+                <small>Add ForCV.png</small>
               </div>
 
             </div>
 
-
             <div class="portrait-info">
 
-              <strong>
-                Nasif Parvez
-              </strong>
+              <div class="availability">
+
+                <span
+                  class="availability-dot"
+                  aria-hidden="true"
+                ></span>
+
+                <span>
+                  Open to internship & junior QA opportunities
+                </span>
+
+              </div>
+
+              <strong>Nasif Parvez</strong>
 
               <small>
-                Aspiring SQA Engineer
+                SQA • Manual Testing • Quality Mindset
               </small>
 
             </div>
 
           </div>
 
-        </div>
+          <div class="hero-badge hero-badge-one">
 
+            <span>✓</span>
+
+            <div>
+              <strong>Manual Testing</strong>
+              <small>Hands-on practice</small>
+            </div>
+
+          </div>
+
+          <div class="hero-badge hero-badge-two">
+
+            <span>↗</span>
+
+            <div>
+              <strong>Live QA Exposure</strong>
+              <small>BiponiBD project</small>
+            </div>
+
+          </div>
+
+        </div>
 
       </div>
 
     </section>
-
-
 
     <!-- =========================
          ABOUT
     ========================== -->
 
     <section
-      class="section section-soft"
+      class="section"
       id="about"
     >
 
-      <div class="container">
+      <div class="container two-column">
 
         <div class="section-heading reveal">
 
-          <p class="eyebrow">
-            About Me
-          </p>
+          <p class="eyebrow">About Me</p>
 
           <h2>
-            Building a strong foundation
-            in software quality.
+            Building a strong QA foundation
+            through hands-on practice.
           </h2>
 
         </div>
 
+        <div class="about-copy reveal">
 
-        <div class="about-grid">
+          <p>
+            I am a Computer Science and Engineering student
+            at Southeast University with a growing focus on
+            Software Quality Assurance. I enjoy understanding
+            how a feature is expected to work, exploring where
+            it can fail, and documenting findings in a clear
+            and structured way.
+          </p>
 
+          <p>
+            My current QA foundation includes SDLC, STLC,
+            test scenario design, test case design, functional
+            testing, smoke testing, regression testing,
+            exploratory testing, retesting, and bug reporting.
+            I am strengthening these skills through both a
+            structured demo project and exposure to a live web
+            project while continuing to learn API testing,
+            SQL for QA, automation testing, and performance testing.
+          </p>
 
-          <div class="about-content reveal">
+          <div class="about-points">
 
-            <p>
-              I am a Computer Science and Engineering
-              student at Southeast University with a
-              growing interest in Software Quality
-              Assurance and software testing.
-            </p>
+            <article>
 
-
-            <p>
-              My current focus is on developing practical
-              manual testing skills through structured
-              practice and real-world exposure. I work
-              with test scenarios, test cases, test data,
-              test execution, bug reporting, retesting,
-              and different functional testing approaches.
-            </p>
-
-
-            <p>
-              Alongside QA, my programming and database
-              background helps me understand software
-              from a technical perspective. I am
-              continuously improving my testing knowledge
-              and building projects that demonstrate my
-              progress as an aspiring SQA Engineer.
-            </p>
-
-          </div>
-
-
-
-          <div class="about-highlights reveal">
-
-            <article class="about-card">
-
-              <span class="about-number">
-                01
-              </span>
+              <span>01</span>
 
               <div>
-
-                <h3>
-                  Quality Mindset
-                </h3>
+                <h3>Structured Testing</h3>
 
                 <p>
-                  Understanding user flows, identifying
-                  risks, and checking whether software
-                  behaves as expected.
+                  I turn features and requirements into
+                  focused scenarios, test cases, test data,
+                  execution results, and defect evidence.
                 </p>
-
               </div>
 
             </article>
 
+            <article>
 
-            <article class="about-card">
-
-              <span class="about-number">
-                02
-              </span>
+              <span>02</span>
 
               <div>
-
-                <h3>
-                  Practical Learning
-                </h3>
+                <h3>Continuous Learning</h3>
 
                 <p>
-                  Practicing on realistic applications
-                  and documenting the complete testing
-                  process.
+                  I prefer to build skills through practical
+                  projects first, then expand into tools and
+                  automation as my QA fundamentals become stronger.
                 </p>
-
-              </div>
-
-            </article>
-
-
-            <article class="about-card">
-
-              <span class="about-number">
-                03
-              </span>
-
-              <div>
-
-                <h3>
-                  Continuous Growth
-                </h3>
-
-                <p>
-                  Expanding from manual testing toward
-                  API testing, automation, SQL, and
-                  other modern QA skills.
-                </p>
-
               </div>
 
             </article>
@@ -401,14 +458,12 @@
 
     </section>
 
-
-
     <!-- =========================
          SKILLS
     ========================== -->
 
     <section
-      class="section"
+      class="section section-soft"
       id="skills"
     >
 
@@ -416,160 +471,127 @@
 
         <div class="section-heading centered reveal">
 
-          <p class="eyebrow">
-            Skills & Tools
-          </p>
+          <p class="eyebrow">Skills & Tools</p>
 
           <h2>
-            My current QA and technical skill set.
+            My current QA toolkit and technical foundation.
           </h2>
 
           <p class="section-description">
-            These skills reflect the areas I have learned,
-            practiced, or currently use while developing
-            my software testing foundation.
+            Core skills are separated from learning goals
+            so the portfolio reflects my actual current level.
           </p>
 
         </div>
 
+        <div class="skills-layout">
 
-        <div class="skills-grid">
+          <article class="skill-panel reveal">
 
+            <div class="panel-title">
 
-          <article class="skill-card reveal">
-
-            <div class="skill-card-top">
-
-              <span class="skill-icon">
-                01
-              </span>
+              <span class="panel-number">01</span>
 
               <div>
-
-                <p class="skill-category">
-                  Quality Assurance
-                </p>
-
-                <h3>
-                  Manual Testing
-                </h3>
-
+                <p>Quality Assurance</p>
+                <h3>Manual Testing</h3>
               </div>
 
             </div>
 
-
-            <p class="skill-description">
-              Validating application behavior through
-              structured manual testing approaches.
-            </p>
-
-
-            <div class="skill-tags">
-
+            <div class="chip-grid">
               <span>SDLC</span>
               <span>STLC</span>
               <span>Functional Testing</span>
               <span>Smoke Testing</span>
               <span>Regression Testing</span>
-              <span>Exploratory Testing</span>
               <span>Retesting</span>
-
+              <span>Exploratory Testing</span>
             </div>
 
           </article>
 
+          <article class="skill-panel reveal">
 
+            <div class="panel-title">
 
-          <article class="skill-card reveal">
-
-            <div class="skill-card-top">
-
-              <span class="skill-icon">
-                02
-              </span>
+              <span class="panel-number">02</span>
 
               <div>
-
-                <p class="skill-category">
-                  QA Documentation
-                </p>
-
-                <h3>
-                  Test Design & Reporting
-                </h3>
-
+                <p>QA Documentation</p>
+                <h3>Test Design & Reporting</h3>
               </div>
 
             </div>
 
-
-            <p class="skill-description">
-              Creating organized testing documentation
-              and communicating software issues clearly.
-            </p>
-
-
-            <div class="skill-tags">
-
-              <span>Test Scenarios</span>
-              <span>Test Cases</span>
-              <span>Test Data</span>
+            <div class="chip-grid">
+              <span>Test Scenario Design</span>
+              <span>Test Case Design</span>
+              <span>Test Data Preparation</span>
               <span>Test Execution</span>
+              <span>Expected vs Actual Result</span>
               <span>Bug Reporting</span>
-              <span>Expected Result</span>
-              <span>Actual Result</span>
-
+              <span>Defect Retesting</span>
             </div>
 
           </article>
 
+          <article
+            class="skill-panel skill-panel-wide reveal"
+          >
 
+            <div class="panel-title">
 
-          <article class="skill-card reveal">
-
-            <div class="skill-card-top">
-
-              <span class="skill-icon">
-                03
-              </span>
+              <span class="panel-number">03</span>
 
               <div>
-
-                <p class="skill-category">
-                  Technical Foundation
-                </p>
-
-                <h3>
-                  Tools & Programming
-                </h3>
-
+                <p>Technical Foundation</p>
+                <h3>Tools & Programming</h3>
               </div>
 
             </div>
 
+            <div class="tool-list">
 
-            <p class="skill-description">
-              Programming, database, and version-control
-              knowledge supporting my understanding
-              of software systems.
-            </p>
+              <div>
+                <span class="tool-icon">G</span>
+                <strong>Git & GitHub</strong>
+                <small>Version control</small>
+              </div>
 
+              <div>
+                <span class="tool-icon">DB</span>
+                <strong>MySQL</strong>
+                <small>Database fundamentals</small>
+              </div>
 
-            <div class="skill-tags">
+              <div>
+                <span class="tool-icon">Py</span>
+                <strong>Python</strong>
+                <small>Programming foundation</small>
+              </div>
 
-              <span>Git</span>
-              <span>GitHub</span>
-              <span>MySQL</span>
-              <span>Python</span>
-              <span>Java</span>
-              <span>C</span>
-              <span>C++</span>
+              <div>
+                <span class="tool-icon">J</span>
+                <strong>Java</strong>
+                <small>Programming foundation</small>
+              </div>
+
+              <div>
+                <span class="tool-icon">C</span>
+                <strong>C / C++</strong>
+                <small>Programming foundation</small>
+              </div>
+
+              <div>
+                <span class="tool-icon">XL</span>
+                <strong>Excel / Sheets</strong>
+                <small>QA documentation</small>
+              </div>
 
             </div>
 
           </article>
-
 
         </div>
 
@@ -577,115 +599,106 @@
 
     </section>
 
-
-
     <!-- =========================
          QA PROJECTS
     ========================== -->
 
     <section
-      class="section section-soft"
+      class="section"
       id="projects"
     >
 
       <div class="container">
 
-        <div class="section-heading centered reveal">
+        <div class="projects-head reveal">
 
-          <p class="eyebrow">
-            Featured QA Projects
-          </p>
+          <div class="section-heading">
 
-          <h2>
-            Practical testing experience
-            through structured projects.
-          </h2>
+            <p class="eyebrow">Featured QA Projects</p>
 
-          <p class="section-description">
-            Practice testing on a demo application
-            and QA exposure on a live product.
-          </p>
+            <h2>
+              Practical work that demonstrates
+              how I approach testing.
+            </h2>
+
+            <p class="section-description">
+              Practice work and live-project exposure
+              are labeled separately so the portfolio
+              stays clear, credible, and recruiter-friendly.
+            </p>
+
+          </div>
+
+          <div
+            class="project-filter"
+            role="group"
+            aria-label="Filter QA projects"
+          >
+
+            <button
+              class="filter-btn active"
+              type="button"
+              data-filter="all"
+            >
+              All
+            </button>
+
+            <button
+              class="filter-btn"
+              type="button"
+              data-filter="practice"
+            >
+              Practice
+            </button>
+
+            <button
+              class="filter-btn"
+              type="button"
+              data-filter="live"
+            >
+              Live
+            </button>
+
+          </div>
 
         </div>
 
-
-        <div class="project-filters reveal">
-
-          <button
-            class="filter-btn active"
-            type="button"
-            data-filter="all"
-          >
-            All
-          </button>
-
-          <button
-            class="filter-btn"
-            type="button"
-            data-filter="practice"
-          >
-            Practice
-          </button>
-
-          <button
-            class="filter-btn"
-            type="button"
-            data-filter="live"
-          >
-            Live
-          </button>
-
-        </div>
-
-
-        <div class="project-grid">
-
+        <div class="projects-grid">
 
           <article
             class="project-card reveal"
             data-category="practice"
           >
 
-            <div class="project-card-header">
+            <div class="project-topline">
 
-              <div>
-
-                <span class="project-type">
-                  Practice / Demo QA Project
-                </span>
-
-                <h3>
-                  OrangeHRM Manual Testing
-                </h3>
-
-              </div>
-
-              <span class="project-number">
-                01
+              <span class="project-badge practice">
+                Practice / Demo
               </span>
 
+              <span class="project-index">01</span>
+
             </div>
 
+            <h3>
+              OrangeHRM Manual Testing
+            </h3>
 
             <p class="project-description">
-              A structured manual testing practice
-              project using the OrangeHRM demo
-              application.
+              A structured practice project using the
+              OrangeHRM demo application to build end-to-end
+              manual testing skills across realistic HR workflows.
             </p>
 
-
             <div class="project-tags">
-
               <span>Manual Testing</span>
-              <span>Functional Testing</span>
-              <span>Smoke Testing</span>
-              <span>Regression Testing</span>
+              <span>Functional</span>
+              <span>Smoke</span>
+              <span>Regression</span>
               <span>Bug Reporting</span>
-
             </div>
 
-
-            <div class="project-metrics">
+            <div class="project-stats">
 
               <div>
                 <small>Coverage</small>
@@ -704,6 +717,12 @@
 
             </div>
 
+            <div class="project-evidence">
+              <span>Test Scenarios</span>
+              <span>Test Cases</span>
+              <span>Execution</span>
+              <span>Bug Reports</span>
+            </div>
 
             <button
               class="project-details-btn"
@@ -711,62 +730,50 @@
               data-project="orangehrm"
             >
               View Project Details
+              <span>↗</span>
             </button>
 
           </article>
-
-
 
           <article
             class="project-card featured reveal"
             data-category="live"
           >
 
-            <div class="featured-label">
+            <div class="featured-ribbon">
               Live Project
             </div>
 
+            <div class="project-topline">
 
-            <div class="project-card-header">
-
-              <div>
-
-                <span class="project-type">
-                  Live / Real QA Project
-                </span>
-
-                <h3>
-                  BiponiBD Website QA
-                </h3>
-
-              </div>
-
-              <span class="project-number">
-                02
+              <span class="project-badge live">
+                Live / Real
               </span>
 
+              <span class="project-index">02</span>
+
             </div>
 
+            <h3>
+              BiponiBD Website QA
+            </h3>
 
             <p class="project-description">
-              Testing exposure on a live and evolving
-              e-commerce application alongside active
-              product development.
+              Live-project QA exposure on an evolving
+              e-commerce website, with testing adapted
+              to changing features and a practical
+              development workflow.
             </p>
 
-
             <div class="project-tags">
-
-              <span>Functional Testing</span>
-              <span>Exploratory Testing</span>
-              <span>Live Website</span>
+              <span>Functional</span>
+              <span>Exploratory</span>
+              <span>Live Web</span>
               <span>Bug Reporting</span>
               <span>Retesting</span>
-
             </div>
 
-
-            <div class="project-metrics">
+            <div class="project-stats">
 
               <div>
                 <small>Environment</small>
@@ -785,6 +792,12 @@
 
             </div>
 
+            <div class="project-evidence">
+              <span>Exploratory Notes</span>
+              <span>Functional Checks</span>
+              <span>Issue Reports</span>
+              <span>Retest Notes</span>
+            </div>
 
             <button
               class="project-details-btn"
@@ -792,10 +805,24 @@
               data-project="biponibd"
             >
               View Project Details
+              <span>↗</span>
             </button>
 
           </article>
 
+        </div>
+
+        <div class="credibility-note reveal">
+
+          <span>✓</span>
+
+          <p>
+            <strong>Portfolio transparency:</strong>
+            OrangeHRM is a practice/demo project.
+            BiponiBD represents live-project QA exposure.
+            Private credentials, customer data, and
+            confidential internal information are not included.
+          </p>
 
         </div>
 
@@ -803,14 +830,12 @@
 
     </section>
 
-
-
     <!-- =========================
          QA WORKFLOW
     ========================== -->
 
     <section
-      class="section"
+      class="section section-soft"
       id="workflow"
     >
 
@@ -818,71 +843,73 @@
 
         <div class="section-heading centered reveal">
 
-          <p class="eyebrow">
-            My QA Workflow
-          </p>
+          <p class="eyebrow">My QA Workflow</p>
 
           <h2>
-            A structured approach
-            to manual testing.
+            From understanding a feature
+            to verifying the fix.
           </h2>
+
+          <p class="section-description">
+            A simple end-to-end workflow that keeps
+            testing organized and repeatable.
+          </p>
 
         </div>
 
+        <div class="workflow-flow">
 
-        <div class="workflow-grid">
-
-          <article class="workflow-card reveal">
+          <article class="workflow-step reveal">
             <span>01</span>
             <h3>Understand</h3>
             <p>
-              Review feature behavior,
-              requirements, and user flow.
+              Review the feature, expected behavior,
+              user flow, and available requirements.
             </p>
           </article>
 
-          <article class="workflow-card reveal">
+          <article class="workflow-step reveal">
             <span>02</span>
             <h3>Design</h3>
             <p>
-              Prepare test scenarios,
-              test cases, and test data.
+              Create relevant test scenarios,
+              test cases, and supporting test data.
             </p>
           </article>
 
-          <article class="workflow-card reveal">
+          <article class="workflow-step reveal">
             <span>03</span>
             <h3>Execute</h3>
             <p>
-              Perform tests and compare
-              expected and actual results.
+              Run the tests and compare actual
+              behavior with the expected result.
             </p>
           </article>
 
-          <article class="workflow-card reveal">
+          <article class="workflow-step reveal">
             <span>04</span>
             <h3>Report</h3>
             <p>
-              Document defects with
-              reproduction information.
+              Document issues with clear steps,
+              evidence, impact, and expected behavior.
             </p>
           </article>
 
-          <article class="workflow-card reveal">
+          <article class="workflow-step reveal">
             <span>05</span>
             <h3>Retest</h3>
             <p>
-              Verify fixes after the issue
-              has been resolved.
+              Verify that a reported issue is
+              resolved after the fix is delivered.
             </p>
           </article>
 
-          <article class="workflow-card reveal">
+          <article class="workflow-step reveal">
             <span>06</span>
             <h3>Regression</h3>
             <p>
-              Check related areas after
-              software changes.
+              Check related areas to ensure the change
+              has not introduced new problems.
             </p>
           </article>
 
@@ -892,14 +919,12 @@
 
     </section>
 
-
-
     <!-- =========================
          TECHNICAL PROJECTS
     ========================== -->
 
     <section
-      class="section section-soft"
+      class="section"
       id="technical-projects"
     >
 
@@ -907,62 +932,51 @@
 
         <div class="section-heading reveal">
 
-          <p class="eyebrow">
-            Technical Projects
-          </p>
+          <p class="eyebrow">Technical Projects</p>
 
           <h2>
-            Projects that strengthened
-            my programming foundation.
+            Programming projects that strengthen
+            my technical understanding.
           </h2>
 
         </div>
-
 
         <div class="technical-grid">
 
           <article class="technical-card reveal">
 
-            <span class="technical-number">
-              01
-            </span>
+            <span class="technical-index">01</span>
 
-            <h3>
-              Contact Book Project
-            </h3>
+            <h3>Contact Book Project</h3>
 
             <p>
-              A Python project for adding,
-              updating, searching, and deleting
-              contact records.
+              A Python mini project for managing
+              personal contacts with adding, updating,
+              searching, and deleting functionality.
             </p>
 
-            <div class="skill-tags">
+            <div class="project-tags">
               <span>Python</span>
               <span>Problem Solving</span>
             </div>
 
           </article>
 
-
-
           <article class="technical-card reveal">
 
-            <span class="technical-number">
-              02
-            </span>
+            <span class="technical-index">02</span>
 
             <h3>
-              User Management System
+              User Management System — Backend
             </h3>
 
             <p>
-              Backend-focused project covering
+              A backend-focused project covering
               user registration, login validation,
               and database interaction.
             </p>
 
-            <div class="skill-tags">
+            <div class="project-tags">
               <span>Java</span>
               <span>MySQL</span>
               <span>Backend Logic</span>
@@ -976,14 +990,12 @@
 
     </section>
 
-
-
     <!-- =========================
          LEARNING ROADMAP
     ========================== -->
 
     <section
-      class="section"
+      class="section section-soft"
       id="learning"
     >
 
@@ -991,54 +1003,96 @@
 
         <div class="section-heading centered reveal">
 
-          <p class="eyebrow">
-            Learning Roadmap
-          </p>
+          <p class="eyebrow">Learning Roadmap</p>
 
           <h2>
-            Expanding my QA skill set
-            step by step.
+            What I am building toward next.
           </h2>
 
-        </div>
+          <p class="section-description">
+            These are learning goals, not expert-level
+            claims. I will move them into my core skills
+            as I gain practical experience.
+          </p>
 
+        </div>
 
         <div class="roadmap-grid">
 
           <article class="roadmap-card reveal">
-            <span class="roadmap-status">Learning</span>
+
+            <span class="roadmap-status learning">
+              Learning
+            </span>
+
             <h3>API Testing</h3>
+
             <p>
-              Learning REST APIs, status codes,
-              requests, responses, and Postman.
+              REST APIs, requests, responses,
+              status codes, and Postman-based validation.
             </p>
+
+            <div class="roadmap-line">
+              <span></span>
+            </div>
+
           </article>
 
           <article class="roadmap-card reveal">
-            <span class="roadmap-status">Planned</span>
-            <h3>Test Automation</h3>
-            <p>
-              Moving toward browser automation
-              after strengthening manual testing.
-            </p>
-          </article>
 
-          <article class="roadmap-card reveal">
-            <span class="roadmap-status">Developing</span>
+            <span class="roadmap-status developing">
+              Developing
+            </span>
+
             <h3>SQL for QA</h3>
+
             <p>
-              Improving database querying skills
-              for data validation.
+              Queries for backend checks, test data
+              validation, and database-level verification.
             </p>
+
+            <div class="roadmap-line">
+              <span></span>
+            </div>
+
           </article>
 
           <article class="roadmap-card reveal">
-            <span class="roadmap-status">Planned</span>
-            <h3>Performance Testing</h3>
+
+            <span class="roadmap-status planned">
+              Planned
+            </span>
+
+            <h3>Automation Testing</h3>
+
             <p>
-              Planning to learn performance
-              and load-testing fundamentals.
+              Web automation after strengthening manual
+              testing and programming fundamentals.
             </p>
+
+            <div class="roadmap-line">
+              <span></span>
+            </div>
+
+          </article>
+
+          <article class="roadmap-card reveal">
+
+            <span class="roadmap-status planned">
+              Planned
+            </span>
+
+            <h3>Performance Testing</h3>
+
+            <p>
+              Performance concepts, load testing
+              fundamentals, metrics, and tool-based practice.
+            </p>
+
+            <div class="roadmap-line">
+              <span></span>
+            </div>
+
           </article>
 
         </div>
@@ -1047,14 +1101,12 @@
 
     </section>
 
-
-
     <!-- =========================
          EDUCATION
     ========================== -->
 
     <section
-      class="section section-soft"
+      class="section"
       id="education"
     >
 
@@ -1062,85 +1114,96 @@
 
         <div class="section-heading reveal">
 
-          <p class="eyebrow">
-            Education
-          </p>
+          <p class="eyebrow">Education</p>
 
           <h2>
-            Academic background.
+            My academic background.
           </h2>
 
         </div>
 
+        <div class="education-timeline">
 
-        <div class="education-list">
+          <article class="education-item reveal">
 
-          <article class="education-card reveal">
+            <div class="education-marker">
+              <span></span>
+            </div>
 
-            <div class="education-year">
+            <div class="education-period">
               2023 — 2027
             </div>
 
-            <div>
+            <div class="education-card">
+
               <h3>
                 B.Sc. in Computer Science & Engineering
               </h3>
 
-              <p class="education-institute">
+              <p>
                 Southeast University, Dhaka
               </p>
 
-              <p class="education-result">
+              <strong>
                 CGPA: 3.64
-              </p>
+              </strong>
+
             </div>
 
           </article>
 
+          <article class="education-item reveal">
 
-          <article class="education-card reveal">
+            <div class="education-marker">
+              <span></span>
+            </div>
 
-            <div class="education-year">
+            <div class="education-period">
               2020 — 2022
             </div>
 
-            <div>
+            <div class="education-card">
+
               <h3>
                 Higher Secondary Certificate
               </h3>
 
-              <p class="education-institute">
-                Sonargaon Star Flower S.R
-                School and College
+              <p>
+                Sonargaon Star Flower S.R School and College
               </p>
 
-              <p class="education-result">
+              <strong>
                 GPA: 5.00
-              </p>
+              </strong>
+
             </div>
 
           </article>
 
+          <article class="education-item reveal">
 
-          <article class="education-card reveal">
+            <div class="education-marker">
+              <span></span>
+            </div>
 
-            <div class="education-year">
+            <div class="education-period">
               2018 — 2020
             </div>
 
-            <div>
+            <div class="education-card">
+
               <h3>
                 Secondary School Certificate
               </h3>
 
-              <p class="education-institute">
-                Baluakandi Dr. Abdul Gaffar
-                School and College
+              <p>
+                Baluakandi Dr. Abdul Gaffar School and College
               </p>
 
-              <p class="education-result">
+              <strong>
                 GPA: 4.44
-              </p>
+              </strong>
+
             </div>
 
           </article>
@@ -1151,162 +1214,381 @@
 
     </section>
 
-
-
     <!-- =========================
          CONTACT
     ========================== -->
 
     <section
-      class="section"
+      class="section contact-section"
       id="contact"
     >
 
-      <div class="container">
+      <div class="container contact-grid">
 
-        <div class="section-heading centered reveal">
+        <div class="contact-copy reveal">
 
-          <p class="eyebrow">
-            Contact
+          <p class="eyebrow">Contact</p>
+
+          <p class="contact-intro">
+            I am open to SQA internships, junior QA
+            opportunities, learning opportunities,
+            and professional connections.
           </p>
 
-          <h2>
-            Let's connect.
-          </h2>
+          <div class="social-contact-list">
 
-          <p class="section-description">
-            Open to SQA internships, junior QA
-            opportunities, and learning opportunities.
-          </p>
-
-        </div>
-
-
-        <div class="contact-grid">
-
-          <div class="contact-info reveal">
+            <!-- PHONE -->
 
             <a
-              class="contact-card"
-              href="mailto:nasifparvez732@gmail.com"
+              class="social-contact-card"
+              href="tel:+8801882461759"
+              aria-label="Call Nasif Parvez"
             >
-              <span class="contact-icon">@</span>
 
-              <div>
+              <span
+                class="social-logo phone-logo"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.8 21 3 13.2 3 3.7c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1l-2.2 2.2z"
+                  />
+                </svg>
+              </span>
+
+              <span class="social-contact-copy">
+                <small>Phone</small>
+                <strong>+880 1882461759</strong>
+              </span>
+
+              <span class="social-arrow">↗</span>
+
+            </a>
+
+            <!-- GMAIL -->
+
+            <a
+              class="social-contact-card"
+              href="mailto:nasifparvez732@gmail.com"
+              aria-label="Email Nasif Parvez"
+            >
+
+              <span
+                class="social-logo gmail-logo"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 24 24">
+                  <path
+                    fill="#4285F4"
+                    d="M2.2 6.1v12.2c0 .9.7 1.6 1.6 1.6h2.5V9.8L2.2 6.1z"
+                  />
+                  <path
+                    fill="#34A853"
+                    d="M17.7 9.8v10.1h2.5c.9 0 1.6-.7 1.6-1.6V6.1l-4.1 3.7z"
+                  />
+                  <path
+                    fill="#EA4335"
+                    d="M17.7 9.8 12 14 6.3 9.8V5.4L12 9.6l5.7-4.2v4.4z"
+                  />
+                  <path
+                    fill="#FBBC04"
+                    d="M21.8 6.1V5.3c0-2-2.3-3.1-3.9-1.9l-.2.1v6.3l4.1-3.7z"
+                  />
+                  <path
+                    fill="#C5221F"
+                    d="M2.2 6.1V5.3c0-2 2.3-3.1 3.9-1.9l.2.1v6.3L2.2 6.1z"
+                  />
+                </svg>
+              </span>
+
+              <span class="social-contact-copy">
                 <small>Gmail</small>
                 <strong>
                   nasifparvez732@gmail.com
                 </strong>
-              </div>
+              </span>
+
+              <span class="social-arrow">↗</span>
+
             </a>
 
+            <!-- LINKEDIN -->
 
             <a
-              class="contact-card"
+              class="social-contact-card"
               href="https://linkedin.com/in/nniloy/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Open LinkedIn"
             >
-              <span class="contact-icon">in</span>
 
-              <div>
+              <span
+                class="social-logo linkedin-logo"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45z"
+                  />
+                </svg>
+              </span>
+
+              <span class="social-contact-copy">
                 <small>LinkedIn</small>
                 <strong>
                   linkedin.com/in/nniloy/
                 </strong>
-              </div>
+              </span>
+
+              <span class="social-arrow">↗</span>
+
             </a>
 
+            <!-- GITHUB -->
 
             <a
-              class="contact-card"
+              class="social-contact-card"
               href="https://github.com/nasifparvezst"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Open GitHub"
             >
-              <span class="contact-icon">GH</span>
 
-              <div>
+              <span
+                class="social-logo github-logo"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.35 6.84 9.71.5.1.68-.22.68-.49 0-.24-.01-1.05-.01-1.9-2.78.62-3.37-1.21-3.37-1.21-.45-1.19-1.11-1.51-1.11-1.51-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.3 9.3 0 0 1 12 6.94a9.3 9.3 0 0 1 2.5.35c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.35 4.79-4.58 5.05.36.32.68.95.68 1.92 0 1.39-.01 2.5-.01 2.84 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.23C22 6.58 17.52 2 12 2z"
+                  />
+                </svg>
+              </span>
+
+              <span class="social-contact-copy">
                 <small>GitHub</small>
                 <strong>
                   github.com/nasifparvezst
                 </strong>
-              </div>
+              </span>
+
+              <span class="social-arrow">↗</span>
+
+            </a>
+
+            <!-- FACEBOOK -->
+
+            <a
+              class="social-contact-card"
+              href="https://www.facebook.com/nniloy732/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Facebook"
+            >
+
+              <span
+                class="social-logo facebook-logo"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M13.7 22v-8.7h2.9l.44-3.39H13.7V7.75c0-.98.27-1.65 1.68-1.65h1.79V3.07c-.31-.04-1.37-.13-2.61-.13-2.58 0-4.35 1.58-4.35 4.49v2.48H7.3v3.39h2.91V22h3.49z"
+                  />
+                </svg>
+              </span>
+
+              <span class="social-contact-copy">
+                <small>Facebook</small>
+                <strong>
+                  facebook.com/nniloy732
+                </strong>
+              </span>
+
+              <span class="social-arrow">↗</span>
+
+            </a>
+
+            <!-- INSTAGRAM -->
+
+            <a
+              class="social-contact-card"
+              href="https://www.instagram.com/nniloy732/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Instagram"
+            >
+
+              <span
+                class="social-logo instagram-logo"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 24 24">
+                  <rect
+                    x="3"
+                    y="3"
+                    width="18"
+                    height="18"
+                    rx="5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="4"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <circle
+                    cx="17.4"
+                    cy="6.7"
+                    r="1.1"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+
+              <span class="social-contact-copy">
+                <small>Instagram</small>
+                <strong>
+                  instagram.com/nniloy732
+                </strong>
+              </span>
+
+              <span class="social-arrow">↗</span>
+
             </a>
 
           </div>
 
+        </div>
 
+        <!-- CONTACT FORM -->
 
-          <form
-            class="contact-form reveal"
-            id="contactForm"
+        <form
+          class="contact-form reveal"
+          id="contactForm"
+          novalidate
+        >
+
+          <div class="contact-availability">
+
+            <span
+              class="availability-dot"
+              aria-hidden="true"
+            ></span>
+
+            <span>
+              Open to SQA internship and junior QA opportunities
+            </span>
+
+          </div>
+
+          <div class="form-heading">
+
+            <span>Quick Message</span>
+
+            <h3>Send me an email</h3>
+
+          </div>
+
+          <div class="field-row">
+
+            <label for="name">Name</label>
+
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Your name"
+              autocomplete="name"
+            >
+
+            <small class="error-message"></small>
+
+          </div>
+
+          <div class="field-row">
+
+            <label for="email">Email</label>
+
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="name@example.com"
+              autocomplete="email"
+            >
+
+            <small class="error-message"></small>
+
+          </div>
+
+          <div class="field-row">
+
+            <label for="message">Message</label>
+
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Write your message here..."
+            ></textarea>
+
+            <small class="error-message"></small>
+
+          </div>
+
+          <button
+            class="btn btn-primary btn-full email-submit-btn"
+            type="submit"
           >
 
-            <div class="field-row">
-
-              <label for="name">
-                Name
-              </label>
-
-              <input
-                id="name"
-                name="name"
-                type="text"
-                placeholder="Your name"
-              >
-
-            </div>
-
-
-            <div class="field-row">
-
-              <label for="email">
-                Email
-              </label>
-
-              <input
-                id="email"
-                name="email"
-                type="email"
-                placeholder="your@email.com"
-              >
-
-            </div>
-
-
-            <div class="field-row">
-
-              <label for="message">
-                Message
-              </label>
-
-              <textarea
-                id="message"
-                name="message"
-                rows="6"
-                placeholder="Write your message..."
-              ></textarea>
-
-            </div>
-
-
-            <button
-              class="btn btn-primary contact-submit"
-              type="submit"
+            <svg
+              class="button-brand-icon"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
             >
-              Send via Email
-            </button>
+              <path
+                fill="#4285F4"
+                d="M2.2 6.1v12.2c0 .9.7 1.6 1.6 1.6h2.5V9.8L2.2 6.1z"
+              />
+              <path
+                fill="#34A853"
+                d="M17.7 9.8v10.1h2.5c.9 0 1.6-.7 1.6-1.6V6.1l-4.1 3.7z"
+              />
+              <path
+                fill="#EA4335"
+                d="M17.7 9.8 12 14 6.3 9.8V5.4L12 9.6l5.7-4.2v4.4z"
+              />
+              <path
+                fill="#FBBC04"
+                d="M21.8 6.1V5.3c0-2-2.3-3.1-3.9-1.9l-.2.1v6.3l4.1-3.7z"
+              />
+              <path
+                fill="#C5221F"
+                d="M2.2 6.1V5.3c0-2 2.3-3.1 3.9-1.9l.2.1v6.3L2.2 6.1z"
+              />
+            </svg>
 
+            Send via Email
 
-            <p
-              class="form-success"
-              id="formSuccess"
-            ></p>
+          </button>
 
-          </form>
+          <p
+            class="form-success"
+            id="formSuccess"
+            role="status"
+            aria-live="polite"
+          ></p>
 
-        </div>
+        </form>
 
       </div>
 
@@ -1314,81 +1596,19 @@
 
   </main>
 
-
-
-  <!-- =========================
-       PROJECT DETAILS MODAL
-  ========================== -->
-
-  <dialog
-    class="project-modal"
-    id="projectModal"
-  >
-
-    <button
-      class="modal-close"
-      id="modalClose"
-      type="button"
-      aria-label="Close project details"
-    >
-      ×
-    </button>
-
-
-    <p
-      class="modal-type"
-      id="modalType"
-    ></p>
-
-
-    <h2 id="modalTitle"></h2>
-
-
-    <p
-      class="modal-description"
-      id="modalDescription"
-    ></p>
-
-
-    <div class="modal-grid">
-
-      <div>
-
-        <h3>
-          What I Worked On
-        </h3>
-
-        <ul id="modalWork"></ul>
-
-      </div>
-
-
-      <div>
-
-        <h3>
-          Learning Outcome
-        </h3>
-
-        <ul id="modalOutcome"></ul>
-
-      </div>
-
-    </div>
-
-  </dialog>
-
-
+  <!-- BACK TO TOP -->
 
   <button
     class="back-to-top"
     id="backToTop"
     type="button"
     aria-label="Back to top"
+    title="Back to top"
   >
     ↑
   </button>
 
-
+  <!-- FOOTER -->
 
   <footer class="site-footer">
 
@@ -1398,16 +1618,66 @@
         Nasif Parvez
       </strong>
 
-      <span>
-        Aspiring SQA Engineer Portfolio
-      </span>
-
     </div>
 
   </footer>
 
+  <!-- PROJECT MODAL -->
+
+  <dialog
+    class="project-modal"
+    id="projectModal"
+  >
+
+    <div class="modal-shell">
+
+      <button
+        class="modal-close"
+        id="modalClose"
+        type="button"
+        aria-label="Close project details"
+      >
+        ×
+      </button>
+
+      <p
+        class="eyebrow"
+        id="modalType"
+      >
+        Project
+      </p>
+
+      <h2 id="modalTitle">
+        Project title
+      </h2>
+
+      <p id="modalDescription"></p>
+
+      <div class="modal-columns">
+
+        <div>
+          <h3>What I worked on</h3>
+          <ul id="modalWork"></ul>
+        </div>
+
+        <div>
+          <h3>What this demonstrates</h3>
+          <ul id="modalOutcome"></ul>
+        </div>
+
+      </div>
+
+      <p
+        class="modal-note"
+        id="modalNote"
+      ></p>
+
+    </div>
+
+  </dialog>
 
   <script src="script.js"></script>
 
 </body>
+
 </html>
