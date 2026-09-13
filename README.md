@@ -76,7 +76,7 @@ Southeast University, Dhaka
 
 ## Live Website
 
-The live portfolio will be available through GitHub Pages.
+https://portfolio-eight-navy-86.vercel.app
 
 ## Contact
 
