@@ -17,7 +17,9 @@ resumeUrl: 'CV.pdf',
 
   // Keep the original portrait from the existing public GitHub repository.
   // The image remains a vertical rectangle and is not replaced or cropped into a circle.
-  photoUrl: 'https://raw.githubusercontent.com/nasifparvezst/Portfolio/main/ForCV.png',
+ 
+photoUrl: '/images/ForCV.png',
+
 };
 
 export const navItems = [
