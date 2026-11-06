@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0b1221"/>
+  <circle cx="1010" cy="180" r="290" fill="#123930" opacity=".6"/>
+  <circle cx="1120" cy="510" r="220" fill="#192d47" opacity=".8"/>
+  <rect x="90" y="96" width="72" height="72" rx="18" fill="#6ce5b5"/>
+  <text x="126" y="140" font-family="Arial,sans-serif" font-size="24" font-weight="800" text-anchor="middle" fill="#061a14">NP.</text>
+  <text x="90" y="287" font-family="Arial,sans-serif" font-size="78" font-weight="800" fill="#f4f8fc">Nasif <tspan fill="#6ce5b5">Parvez.</tspan></text>
+  <text x="90" y="362" font-family="Arial,sans-serif" font-size="35" font-weight="700" fill="#f4f8fc">Software Quality Assurance Portfolio</text>
+  <text x="90" y="429" font-family="Arial,sans-serif" font-size="24" fill="#a3b1c5">Manual Testing  ·  API Testing  ·  SQL  ·  Learning Automation</text>
+  <rect x="90" y="494" width="256" height="4" rx="2" fill="#6ce5b5"/>
+  <text x="90" y="552" font-family="Arial,sans-serif" font-size="19" fill="#a3b1c5">Dhaka, Bangladesh</text>
+</svg>
